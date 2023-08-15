@@ -77,4 +77,5 @@ public class WikipediaWebTest {
 
         $$("[id=content] div").shouldHave(CollectionCondition.sizeGreaterThan(0));
     }
+
 }
