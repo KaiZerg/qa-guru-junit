@@ -1,0 +1,39 @@
+0) TEST_DATA:
+[
+   ['Java', 'Java'],
+   ['JUnit', 'JUnit']
+]
+
+1) ЗАГОЛОВОК: "В поисковой выдаче wikipedia присутствует заголовок статьи 'TEST_DATA[0]' для запроса 'TES_DATA[1]'
+2) ПРИОРОИТЕТ: BLOCKER
+3) ПРЕДУСЛОВИЯ: - Открыт браузер chrome, location: https://en.wikipedia.org/wiki/Main_Page
+
+4) ШАГИ
+- Ввести в поле поиска 'TES_DATA[1]'
+- Нажать Enter
+
+5) ОЖИДАЕМЫЙ РЕЗУЛЬТАТ:
+- В поисковой выдаче wikipedia присутствует заголовок статьи 'TES_DATA[0]'
+
+
+
+0) TEST_DATA:
+[
+   ['Java'],
+   ['JUnit']
+]
+
+1) ЗАГОЛОВОК: "Поисковая выдача wikipedia не пустая для запроса 'TES_DATA[0]'"
+2) ПРИОРОИТЕТ: BLOCKER
+3) ПРЕДУСЛОВИЯ: - Открыт браузер chrome, location: https://en.wikipedia.org/wiki/Main_Page
+
+4) ШАГИ
+- Ввести в поле поиска 'TES_DATA[0]'
+- Нажать Enter
+
+5) ОЖИДАЕМЫЙ РЕЗУЛЬТАТ:
+- Поисковая выдача wikipedia не пустая
+
+
+
+
