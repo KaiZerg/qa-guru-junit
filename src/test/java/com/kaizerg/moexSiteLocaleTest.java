@@ -1,6 +1,7 @@
 package com.kaizerg;
 
 import com.codeborne.selenide.Configuration;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
@@ -17,7 +18,9 @@ import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class moexSiteLocaleTest {
-    static {
+    @BeforeAll
+    static void beforeAll() {
+        Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
     }
     static Stream<Arguments> wikipediaSiteLocaleTest() {

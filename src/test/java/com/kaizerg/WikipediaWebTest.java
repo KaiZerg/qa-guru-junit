@@ -11,15 +11,19 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
+
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class WikipediaWebTest {
-   static { Configuration.pageLoadStrategy = "eager";
+    @BeforeAll
+    static void beforeAll() {
+        Configuration.browserSize = "1920x1080";
+        Configuration.pageLoadStrategy = "eager";
     }
-
     @BeforeEach
     void setUp() {
         open("https://en.wikipedia.org/wiki/Main_Page");
     }
+
 
     @Order(1)
     @CsvSource(value = {
